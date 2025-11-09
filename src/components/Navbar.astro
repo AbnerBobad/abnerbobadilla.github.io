@@ -1,0 +1,52 @@
+---
+// tailwind
+import "../styles/global.css";
+// Global path for active pages
+const currentPath = Astro.url.pathname;
+
+//Defined tailwind classes for active and inactive links
+const activeClasses = "font-bold text-white bg-gray-700";
+const inactiveClasses = "text-white hover:text-white hover:underline hover:decoration-wavy hover:decoration-[2px] hover:decoration-red-700";
+---
+
+<nav class="bg-black/40 backdrop-blur-md text-white p-4 shadow-lg flex items-center justify-between fixed top-0 w-full z-50">
+  <a href="/" class="text-2xl font-bold outline-3 outline-offset-2 outline-double outline-red-900 p-1 hover:outline-red-700">FOC</a>
+  <!-- Desktop menu -->
+  <ul class="hidden md:flex space-x-4">
+    <li><a href="/" class={`px-3 py-2 rounded-md ${currentPath === "/" ? activeClasses : inactiveClasses}`}>Main</a></li>
+    <li><a href="/team" class={`px-3 py-2 rounded-md ${currentPath === "/team" ? activeClasses : inactiveClasses}`}>Team</a></li>
+    <li><a href="/gallery" class={`px-3 py-2 rounded-md ${currentPath === "/gallery" ? activeClasses : inactiveClasses}`}>Video</a></li>
+    <li><a href="/document" class={`px-3 py-2 rounded-md ${currentPath === "/document" ? activeClasses : inactiveClasses}`}>Documentation</a></li>
+    <li><a href="/form" class={`px-3 py-2 rounded-md ${currentPath === "/form" ? activeClasses : inactiveClasses}`}>Form</a></li>
+  </ul>
+
+  <!-- Mobile menu button -->
+  <button id="menu-btn" class="block md:hidden p-2 rounded hover:bg-gray-700">
+    <!-- Menu Icon-->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu" class="hidden md:hidden pt-18 bg-black/60 backdrop-blur-md text-white border-t border-white/10">
+  <ul class="flex flex-col">
+    <li><a href="/" class={`block px-4 py-2 ${currentPath === "/" ? activeClasses : inactiveClasses}`}>Main</a></li>
+    <li><a href="/team" class={`block px-4 py-2 ${currentPath === "/team" ? activeClasses : inactiveClasses}`}>Team</a></li>
+    <li><a href="/gallery" class={`block px-4 py-2 ${currentPath === "/gallery" ? activeClasses : inactiveClasses}`}>Video</a></li>
+    <li><a href="/document" class={`block px-4 py-2 ${currentPath === "/document" ? activeClasses : inactiveClasses}`}>Documentation</a></li>
+    <li><a href="/form" class={`block px-4 py-2 ${currentPath === "/form" ? activeClasses : inactiveClasses}`}>Form</a></li>
+  </ul>
+</div>
+
+<!-- Button script -->
+<script>
+  const menuBtn = document.getElementById('menu-btn')!; //not null = (!)
+  const mobileMenu = document.getElementById('mobile-menu')!;//not null = (!)
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>

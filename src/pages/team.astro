@@ -1,0 +1,87 @@
+---
+//base layout for the webpages
+import Layout from '../layouts/Layout.astro';
+---
+
+
+<Layout title="Team Members">
+  <section
+    class="w-full min-h-screen py-20 md:py-26 bg-linear-to-b from-[#0A0F24] via-[#1B2440] to-[#0F0A14] text-gray-200"
+  >
+    <h1
+      class="text-center text-4xl md:text-6xl font-extrabold tracking-wide mb-16 text-cyan-300"
+    >
+      Team 5 Members
+    </h1>
+
+    <div
+      class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-2 gap-10"
+    >
+      <!-- Card 1 -->
+      <div
+        class="text-center bg-white/10 backdrop-blur-xl rounded-2xl p-10 shadow-xl border border-white/10 hover:border-cyan-300/60 transition duration-300"
+      >
+        <img
+          src="/abner.jpg"
+          alt="Abner Bobadilla"
+          class="w-50 h-50 rounded-full mx-auto object-cover shadow-lg border-4 border-cyan-300/40"
+        />
+        <h2 class="text-2xl mt-6 font-semibold text-cyan-300">
+          Abner Bobadilla
+        </h2>
+        <p class="text-sm md:text-base leading-relaxed mt-3 opacity-90">
+          IT student at the University of Belize (UB) with a passion for
+          exploring and learning new technologies. I am actively pursuing my
+          Bachelor's degree and enjoy working on web development projects. I
+          enjoyed getting an introduction to various topics that are later
+          covered in the associate's program.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="text-center bg-white/10 backdrop-blur-xl rounded-2xl p-10 shadow-xl border border-white/10 hover:border-cyan-300/60 transition duration-300"
+      >
+        <img
+          src=""
+          alt="Valentino Vernon"
+          class="w-50 h-50 rounded-full mx-auto object-cover shadow-lg border-4 border-cyan-300/40"
+        />
+        <h2 class="text-2xl font-semibold text-cyan-300">Valentino Vernon</h2>
+        <p class="text-sm md:text-base leading-relaxed mt-3 opacity-90">
+          about
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="text-center bg-white/10 backdrop-blur-xl rounded-2xl p-10 shadow-xl border border-white/10 hover:border-cyan-300/60 transition duration-300"
+      >
+        <img
+          src=""
+          alt="Carlos Chulin"
+          class="w-50 h-50 rounded-full mx-auto object-cover shadow-lg border-4 border-cyan-300/40"
+        />
+        <h2 class="text-2xl font-semibold text-cyan-300">VCarlos Chulin</h2>
+        <p class="text-sm md:text-base leading-relaxed mt-3 opacity-90">
+          about
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div
+        class="text-center bg-white/10 backdrop-blur-xl rounded-2xl p-10 shadow-xl border border-white/10 hover:border-cyan-300/60 transition duration-300"
+      >
+        <img
+          src=""
+          alt="Jadon King"
+          class="w-50 h-50 rounded-full mx-auto object-cover shadow-lg border-4 border-cyan-300/40"
+        />
+        <h2 class="text-2xl font-semibold text-cyan-300">Jadon King</h2>
+        <p class="text-sm md:text-base leading-relaxed mt-3 opacity-90">
+          about
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

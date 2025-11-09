@@ -1,0 +1,69 @@
+---
+//base layout for the webpages
+import Layout from '../layouts/Layout.astro';
+---
+
+
+<Layout title="Fundamentals of Computing">
+  <!--Navbar -->
+
+  <!--Main Content-->
+  <section
+    class="relative py-40 md:py-55 flex items-center justify-center text-white"
+  >
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-[url('/main_bkg.jpg')] bg-cover bg-center">
+    </div>
+    <!-- Overlay for brightness / color -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center max-w-3xl px-6 space-y-6">
+      <h1 class="text-4xl md:text-6xl font-bold">Fundamentals of Computing</h1>
+      <p class="text-base md:text-lg italic">
+        This course introduces fundamental Computer Science concepts, providing
+        a foundation for advanced studies. It covers key topics such as computer
+        architecture, operating systems, networks, software development, and
+        data organization, helping students understand the capabilities of
+        computing systems.
+      </p>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div
+      class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-white/80 text-sm"
+    >
+      <span>Scroll</span>
+      <div class="w-1 h-6 bg-white/80 rounded-full mx-auto mt-1"></div>
+    </div>
+  </section>
+
+  <!-- MISSION & APPROACH -->
+  <section
+    class="py-30 md:py-40 bg-linear-to-b from-[#0A0F24] via-[#1B2440] to-[#0F0A14] text-gray-200"
+  >
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+      <div
+        class="text-center space-y-6 bg-black/40 backdrop-blur-lg rounded-2xl p-10 text-white shadow-xl hover:shadow-cyan-300 transition-shadow duration-300"
+      >
+        <h2 class="ext-3xl md:text-4xl font-bold">Mission Statement</h2>
+        <p class="text-base md:text-lg leading-relaxed italic">
+          Our mission is to design and implement a user-friendly Student
+          Information Form that efficiently collects, stores, and retrieves
+          student data, ensuring accuracy, accessibility, and seamless
+          interaction with the database.
+        </p>
+      </div>
+      <div
+        class="text-center space-y-6 bg-black/40 backdrop-blur-lg rounded-2xl p-10 text-white shadow-xl hover:shadow-cyan-300 transition-shadow duration-300"
+      >
+        <h2 class="text-3xl md:text-4xl font-bold">Approach</h2>
+        <p class="text-base md:text-lg leading-relaxed italic">
+          This website was created using Astro, Tailwind, and Supabase. Each
+          team member contributed to gathering content and developing sections
+          collaboratively.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
