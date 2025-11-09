@@ -1,5 +1,5 @@
 # 🌐 Fundamentals of Computing – Team 5
-Technology Used:
+
 ![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
@@ -74,10 +74,10 @@ Run these commands from the root of your project directory:
    cd foc-final-project
 
 2. **Install dependencies**
-    npm install
+    ```npm install
 
 3. **Run the development Server**
-    npm run dev
+    ```npm run dev
 
 ---
 
