@@ -74,10 +74,12 @@ Run these commands from the root of your project directory:
    cd foc-final-project
 
 2. **Install dependencies**
-    ```npm install
+    ```
+    npm install
 
 3. **Run the development Server**
-    ```npm run dev
+    ```
+    npm run dev
 
 ---
 
