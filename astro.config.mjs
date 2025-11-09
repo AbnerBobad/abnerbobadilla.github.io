@@ -7,5 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+  site: 'https://abnerbobadilla.github.io/student_info_form/',
+  base: '/student_info_form/',
+  outDir: './dist',
 });
