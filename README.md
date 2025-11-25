@@ -70,7 +70,7 @@ Run these commands from the root of your project directory:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/foc-final-project.git
+   git clone https://github.com/yourusername/_repo-name
    cd foc-final-project
 
 2. **Install dependencies**

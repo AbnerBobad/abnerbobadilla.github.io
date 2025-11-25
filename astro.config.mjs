@@ -3,12 +3,16 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import netlify from '@astrojs/netlify';
+
 // https://astro.build/config
 export default defineConfig({
+  // site: 'https://abnerbobadilla.github.io/',
+  // base: '/focteam5/',
+  // outDir: './dist',
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://abnerbobadilla.github.io/student_info_form/',
-  base: '/student_info_form/',
-  outDir: './dist',
+
+  adapter: netlify(),
 });
