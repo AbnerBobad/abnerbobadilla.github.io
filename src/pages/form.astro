@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { supabase } from '../lib/supabase.js';
+export const prerender = false;
 
 // Fetch all students (for initial render)
 const { data: studentsData, error: fetchError } = await supabase
