@@ -205,7 +205,7 @@ const students = fetchError ? [] : studentsData;
       };
 
       try {
-        const endpoint = isEditing ? '/api/update-student' : '/api/add-student';
+        const endpoint = isEditing ? '../api/update-student' : '../api/add-student';
         const payload = isEditing ? { ...data, id: editStudentId } : data;
 
         const res = await fetch(endpoint, {
@@ -215,7 +215,6 @@ const students = fetchError ? [] : studentsData;
         });
 
         const result = await res.json();
-
         if (result.error) {
           showToast(result.error, "error");
         } else {
@@ -268,7 +267,7 @@ const students = fetchError ? [] : studentsData;
         if (!confirm(`Are you sure you want to delete ${name}?`)) return;
 
         try {
-          const res = await fetch('/api/delete-student', {
+          const res = await fetch('../api/delete-student', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id })
